@@ -1,0 +1,18 @@
+
+//C# Code
+class Checker
+{
+    static bool batteryIsOk(float temperature, float soc, float chargeRate) {   //This method violates SRP because it does 3 responsibilities in the same method
+        if(temperature < 0 || temperature > 45) {
+            Console.WriteLine("Temperature is out of range!");
+            return false;
+        } else if(soc < 20 || soc > 80) {
+            Console.WriteLine("State of Charge is out of range!");
+            return false;
+        } else if(chargeRate > 0.8) {
+            Console.WriteLine("Charge Rate is out of range!");
+            return false;
+        }
+        return true;
+    }          // We can make 3 new methods each for Temperature check, soc check and chargeRate check to follow SRP and then just call all three methods from batteryIsOk
+}
