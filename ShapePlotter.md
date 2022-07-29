@@ -47,14 +47,14 @@ public abstract class ShapePlotter{
 
 public class LaserPrinter : ShapePlotter{
 
-	public override void Plot(Rectangle r) { r.GeHeightAndWidth();}
-	public override void Plot(Circle c) {c.GetRadius();}
-	public override void Plot(Polygon p) {p.GetSides();}
+	public override void Plot(Rectangle r) { Console.WriteLine(r.GeHeightAndWidth());}
+	public override void Plot(Circle c) { Console.WriteLine(c.GetRadius());}
+	public override void Plot(Polygon p) { Console.WriteLine(p.GetSides());}
 }
 public class InkJetPrinter : ShapePlotter{
 	
-	public override void Plot(Rectangle r) { r.GeHeightAndWidth();}
-	public override void Plot(Circle c) {c.GetRadius();}
-	public override void Plot(Polygon p) {p.GetSides();}
+	public override void Plot(Rectangle r) { Console.WriteLine(r.GeHeightAndWidth());}
+	public override void Plot(Circle c) { Console.WriteLine(c.GetRadius());}
+	public override void Plot(Polygon p) { Console.WriteLine(p.GetSides());}
 }
 
